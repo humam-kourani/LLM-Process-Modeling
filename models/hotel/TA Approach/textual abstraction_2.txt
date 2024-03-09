@@ -1,0 +1,20 @@
+Start Event -> Take Order
+Take Order -> Submit Order Ticket to Kitchen
+Take Order -> AND Gateway 1
+AND Gateway 1 -> Prepare Food
+AND Gateway 1 -> Assign Order to Waiter
+AND Gateway 1 -> XOR Gateway 1
+XOR Gateway 1 -> (Wine or Alcohol Included) Give Order to Sommelier
+XOR Gateway 1 -> (No Wine or Alcohol) AND Gateway 2
+Give Order to Sommelier -> AND Gateway 2
+Prepare Food -> AND Gateway 2
+Assign Order to Waiter -> Ready Cart
+Ready Cart -> AND Gateway 2
+AND Gateway 2 -> Deliver Order
+Deliver Order -> Debit Guest's Account
+Debit Guest's Account -> XOR Gateway 2
+XOR Gateway 2 -> (Another Order to Prepare or Deliver) Prepare Next Order
+XOR Gateway 2 -> (No Further Orders) End Event
+Prepare Next Order -> AND Gateway 1
+Deliver Order -> (Optional) Receive Tip
+Receive Tip -> End Event

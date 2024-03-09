@@ -1,0 +1,8 @@
+Start -> Takes down the order -> AND1 -> (Path 1) Submit order ticket to kitchen -> Prepares food -> AND2
+                                             (Path 2) Give order to sommelier -> XOR1 -> (Yes) Fetches wine and prepares alcoholic beverages -> AND2
+                                                                                     -> (No) AND2
+                                             (Path 3) Assign order to waiter -> Readies a cart and prepares nonalcoholic drinks -> AND2
+AND2 -> Delivers order to the guest's room -> XOR2 -> (Tip) Receives tip -> Returns to the room-service station
+                                                    -> (No Tip) Returns to the room-service station
+Returns to the room-service station -> XOR3 -> (Yes) End Process
+                                           -> (No) Debits the guest's account -> End
