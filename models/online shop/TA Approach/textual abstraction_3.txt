@@ -1,0 +1,20 @@
+Start - Login
+Login - AND Gateway 1
+AND Gateway 1 - Add Items
+AND Gateway 1 - Set Payment Method
+Add Items - XOR Gateway 1
+XOR Gateway 1 - (add more items) Add Items
+XOR Gateway 1 - (done) AND Gateway 2
+Set Payment Method - AND Gateway 2
+AND Gateway 2 - Pay
+AND Gateway 2 - Complete Installment Agreement
+Pay - XOR Gateway 2
+Complete Installment Agreement - XOR Gateway 2
+XOR Gateway 2 - AND Gateway 3
+Add Items - Select Reward (optional path)
+Select Reward - AND Gateway 3
+AND Gateway 3 - Deliver Items
+Deliver Items - XOR Gateway 3
+XOR Gateway 3 - (keep) End
+XOR Gateway 3 - (return) Return Items
+Return Items - Deliver Items
