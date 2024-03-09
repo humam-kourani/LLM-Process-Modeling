@@ -1,0 +1,21 @@
+Start Event -> Guest Calls Room Service
+Guest Calls Room Service -> Room-Service Manager Takes Order
+Room-Service Manager Takes Order -> AND Gateway 1
+AND Gateway 1 -> Submits Order Ticket to Kitchen
+Submits Order Ticket to Kitchen -> Prepare Food
+AND Gateway 1 -> Gives Order to Sommelier
+AND Gateway 1 -> Assigns Order to Waiter
+Prepare Food -> AND Gateway 2
+Gives Order to Sommelier -> AND Gateway 2
+Assigns Order to Waiter -> Readies Cart
+Readies Cart -> AND Gateway 2
+AND Gateway 2 -> Waiter Delivers Order
+Waiter Delivers Order -> XOR Gateway 1 (Tipping Decision)
+XOR Gateway 1 -> (Guest Tips) Guest Tips Waiter
+XOR Gateway 1 -> (No Tip) Proceeds Without Tip
+Guest Tips Waiter -> XOR Gateway 2
+Proceeds Without Tip -> XOR Gateway 2
+XOR Gateway 2 -> XOR Gateway 3 (Decision to Prepare Another Order or Debit Account)
+XOR Gateway 3 -> (Has Another Order) Readies Cart
+XOR Gateway 3 -> (No More Orders) Debits Guest's Account
+Debits Guest's Account -> End Event

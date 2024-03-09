@@ -1,0 +1,21 @@
+Start -> Login
+Login -> AND Gateway 1
+AND Gateway 1 -> Select Items
+Select Items -> XOR Gateway 1
+XOR Gateway 1 -> Select Items
+XOR Gateway 1 -> Set Payment Method
+AND Gateway 1 -> Set Payment Method
+Set Payment Method -> XOR Gateway 2
+XOR Gateway 2 -> Pay
+XOR Gateway 2 -> Complete Installment Agreement
+Pay -> AND Gateway 3
+Complete Installment Agreement -> AND Gateway 3
+AND Gateway 3 -> XOR Gateway 3
+XOR Gateway 3 -> Choose Free Reward
+XOR Gateway 3 -> AND Gateway 4
+Choose Free Reward -> AND Gateway 4
+AND Gateway 4 -> Deliver Items
+Deliver Items -> XOR Gateway 4
+XOR Gateway 4 -> End
+XOR Gateway 4 -> Return Items
+Return Items -> Deliver Items
